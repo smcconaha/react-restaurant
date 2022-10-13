@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ListItem from './ListItem'; 
 
 function App() {
-    const [index, setIndex] = useState(2); // [ variable, setVariable ]
     const [menuItems, setMenuItems] = useState([
         {
             "id": 1,
@@ -60,13 +59,6 @@ function App() {
 
 
     const listItems = menuItems.map(item => <ListItem  item={item} />);
-//   <ul>
-//   <li>Creola Katherine Johnson: mathematician</li>
-//   <li>Mario José Molina-Pasquel Henríquez: chemist</li>
-//   <li>Mohammad Abdus Salam: physicist</li>
-//   <li>Percy Lavon Julian: chemist</li>
-//   <li>Subrahmanyan Chandrasekhar: astrophysicist</li>
-// </ul>
     return <ul>{listItems}</ul>;
 
 }
