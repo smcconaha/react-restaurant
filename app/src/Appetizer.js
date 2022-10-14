@@ -1,6 +1,5 @@
 export default function Appetizer (props) {
     let appetizerFilter = props.appetizerData.filter(data => data.category.title === "Appetizer")
-    console.log(appetizerFilter);
     return (
         <>
             {appertizerFilter.map((food) => {

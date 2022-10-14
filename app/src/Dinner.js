@@ -1,6 +1,5 @@
 export default function Dinner (props) {
     let dinnerFilter = props.dinnerData.filter(data => data.category.title === "Dinner")
-    console.log(dinnerFilter);
     return (
         <>
             {dinnerFilter.map((food) => {

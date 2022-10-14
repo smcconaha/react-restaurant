@@ -8,25 +8,18 @@ import Lunch from "./Lunch";
 import Dessert from "./Dessert";
 import Appetizer from "./Appetizer";
 import Side from "./Side";
+import NavBar from "./NavBar";
 
 function App() { //alt can use export default function App
     const baseURL = "https://astute-baton-362318.ue.r.appspot.com/api/json/" //should this be all caps var name?
     const [data, setData] = useState([]);
     const [page, setPage] = useState ('Breakfast')
-    // const [type, setType] = useState("");
     
     useEffect(() => {
         axios.get(baseURL).then((response) => {
             setData(response.data);
         });
-    }, []);
-    console.log(data);
-
-    // const condensedMenu = data.filter((item) => {
-    //     return item.category.title === type;
-    // });
-
-    // let filLowerMen = condensedMenu.slice(0, 9);
+    }, []); //the [] keeps it from pinging more than once
 
     if (data.length === 0) 
         return (
@@ -38,6 +31,8 @@ function App() { //alt can use export default function App
     if (data.length !== 0) {
         return (
             <div className="container">
+                <div className="row justify-content-center"></div>
+                    <Appetizer appetizerData = {data} />
                 <div className="row justify-content-center">
                     <Appetizer appetizerData = {data} />
                     <Breakfast breakfastData = {data} />
