@@ -39,14 +39,12 @@ function App() { //alt can use export default function App
         return (
             <div className="container">
                 <div className="row justify-content-center">
+                    <Appetizer appetizerData = {data} />
                     <Breakfast breakfastData = {data} />
-                    {/* <Card
-                    key={id}
-                    title={title}
-                    category={category.title}
-                    description={description}
-                    price={price}
-                    /> */}
+                    <Dessert dessertData = {data} />
+                    <Dinner dinnerData = {data} />
+                    <Lunch lunchData = {data} />
+                    <Side sideData = {data} />
                 </div>
             </div>
         )
