@@ -1,7 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Card from "./Card"
+
+import Breakfast from "./Breakfast";
+import Dinner from "./Dinner";
+import Lunch from "./Lunch";
+import Dessert from "./Dessert";
+import Appetizer from "./Appetizer";
+import Side from "./Side";
 
 function App() { //alt can use export default function App
     const baseURL = "https://astute-baton-362318.ue.r.appspot.com/api/json/" //should this be all caps var name?
@@ -14,6 +20,7 @@ function App() { //alt can use export default function App
             setData(response.data);
         });
     }, []);
+    console.log(data);
 
     // const condensedMenu = data.filter((item) => {
     //     return item.category.title === type;
@@ -24,14 +31,15 @@ function App() { //alt can use export default function App
     if (data.length === 0) 
         return (
             <>
-                <h1>Add Home Page</h1>
+                <h1>Loading...</h1>
             </>
         );
 
     if (data.length !== 0) {
         return (
             <div className="container">
-                <div className="row d-flex justify-content-center">
+                <div className="row justify-content-center">
+                    <Breakfast breakfastData = {data} />
                     {/* <Card
                     key={id}
                     title={title}
