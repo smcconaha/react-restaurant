@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/styles.css'
 
 import Breakfast from "./Breakfast";
 import Dinner from "./Dinner";
@@ -38,26 +39,14 @@ function App() { //alt can use export default function App
             <>
                 <Header handleClick={setPage}/>
                 {page === 'Home'&& <Home />}
-                {page === 'Appetizers' && <Appetizer fullMenu={data}/>}
-                {page === 'Lunch' && <Lunch fullMenu={data}/>}
-                {page === 'Dinner' && <Dinner fullMenu={data}/>}
-                {page === 'Breakfast' && <Breakfast fullMenu={data}/>}
-                {page === 'Dessert' && <Dessert fullMenu={data}/>}
-                {page === 'Sides' && <Side fullMenu={data}/>}
+                {page === 'Appetizers' && <Appetizer appetizerData={data}/>}
+                {page === 'Lunch' && <Lunch lunchData={data}/>}
+                {page === 'Dinner' && <Dinner dinnerData={data}/>}
+                {page === 'Breakfast' && <Breakfast breakfastData={data}/>}
+                {page === 'Dessert' && <Dessert dessertData={data}/>}
+                {page === 'Side' && <Side sideData={data}/>}
                 <Footer />
             </>
-            // <div className="container">
-            //     <div className="row justify-content-center"></div>
-            //         <Appetizer appetizerData = {data} />
-            //     <div className="row justify-content-center">
-            //         <Appetizer appetizerData = {data} />
-            //         <Breakfast breakfastData = {data} />
-            //         <Dessert dessertData = {data} />
-            //         <Dinner dinnerData = {data} />
-            //         <Lunch lunchData = {data} />
-            //         <Side sideData = {data} />
-            //     </div>
-            // </div>
         )
     }
 }    

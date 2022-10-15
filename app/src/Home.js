@@ -1,11 +1,8 @@
 function Home() {
     return(
         <>
-            <div className="card text-bg-dark">
-                <img src={require('./image/potatusEtMol.png')} alt='arbitrary text' id="homeimg"/>
-                <div className="card-img-overlay d-flex align-items-center justify-content-center">
-                    <img src={require('./image/potatusEtMol.png')} alt='main logo' id="homelogo"/>
-                </div>
+            <div className="card">
+                <img src={require('./image/potatusEtMol.png')} alt='colorful image of bunt cake with a rose on top and banner that says potatus et molassus ' id="mainImg"/>
             </div>
         </>
     )
