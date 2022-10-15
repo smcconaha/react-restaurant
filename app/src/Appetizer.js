@@ -2,7 +2,7 @@ export default function Appetizer (props) {
     let appetizerFilter = props.appetizerData.filter(data => data.category.title === "Appetizer")
     return (
         <>
-            {appertizerFilter.map((food) => {
+            {appetizerFilter.map((food) => {
                 return (
                     <div className="card">
                         <div className="card-body">
