@@ -28,24 +28,28 @@ function App() { //alt can use export default function App
     if (data.length === 0) 
         return (
             <>
-                <Header />
-                <Home />
-                <Footer />
+                <div className='container'>
+                    <Header />
+                    <Home />
+                    <Footer />
+                </div>
             </>
         );
 
     if (data.length !== 0) {
         return (
             <>
-                <Header handleClick={setPage}/>
-                {page === 'Home'&& <Home />}
-                {page === 'Appetizers' && <Appetizer appetizerData={data}/>}
-                {page === 'Lunch' && <Lunch lunchData={data}/>}
-                {page === 'Dinner' && <Dinner dinnerData={data}/>}
-                {page === 'Breakfast' && <Breakfast breakfastData={data}/>}
-                {page === 'Dessert' && <Dessert dessertData={data}/>}
-                {page === 'Side' && <Side sideData={data}/>}
-                <Footer />
+                <div className='container'>
+                    <Header handleClick={setPage}/>
+                    {page === 'Home'&& <Home />}
+                    {page === 'Appetizers' && <Appetizer appetizerData={data}/>}
+                    {page === 'Lunch' && <Lunch lunchData={data}/>}
+                    {page === 'Dinner' && <Dinner dinnerData={data}/>}
+                    {page === 'Breakfast' && <Breakfast breakfastData={data}/>}
+                    {page === 'Dessert' && <Dessert dessertData={data}/>}
+                    {page === 'Side' && <Side sideData={data}/>}
+                    <Footer />
+                </div>
             </>
         )
     }
