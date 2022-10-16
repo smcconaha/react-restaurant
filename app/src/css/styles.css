@@ -1,0 +1,14 @@
+
+.nav-link {
+    background-color: transparent;
+    border: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+.container{
+    background-color: #B6CEC3;
+}
+#mainImg{
+    background-color: #B6CEC3;
+}
