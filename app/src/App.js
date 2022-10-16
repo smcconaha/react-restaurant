@@ -30,6 +30,7 @@ function App() { //alt can use export default function App
             <>
                 <div className='container'>
                     <Header />
+                    <div className="fs-3 text-danger"><strong>Please wait while page loads</strong></div>
                     <Home />
                     <Footer />
                 </div>
