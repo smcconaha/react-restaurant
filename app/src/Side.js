@@ -1,5 +1,5 @@
 export default function Side (props) {
-    let sideFilter = props.sideData.filter(data => data.category.title === "Side")
+    let sideFilter = props.sideData.filter(data => data.cuisine.title === "Side")
     return (
         <>
             {sideFilter.map((food) => {

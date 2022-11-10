@@ -1,5 +1,5 @@
 export default function Appetizer (props) { //props opens the gate, allowing theis function to access data
-    let appetizerFilter = props.appetizerData.filter(data => data.category.title === "Appetizer") //we are filtering API data here
+    let appetizerFilter = props.appetizerData.filter(data => data.cuisine.title === "Appetizer") //we are filtering API data here
     //below looping through filtered API data and using map array method to assign each iteration to a card
     return (
         <>

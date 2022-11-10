@@ -15,12 +15,13 @@ import Footer from "./Footer";
 
 
 function App() { //alt can use export default function App
-    const baseURL = "https://astute-baton-362318.ue.r.appspot.com/api/json/" //should this be all caps var name?
+    const baseURL = "https://8000-smcconaha-backendbistro-b3dyyt5x20u.ws-us75.gitpod.io/bistro/menu/test/" //should this be all caps var name?
     const [data, setData] = useState([]);
     const [page, setPage] = useState ('Home')
     
     useEffect(() => {
         axios.get(baseURL).then((response) => {
+            console.log(response.data)
             setData(response.data);
         });
     }, []); //the [] keeps it from pinging more than once
